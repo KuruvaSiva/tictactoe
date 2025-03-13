@@ -17,14 +17,12 @@ function gamePlay(box_id){
    {
     document.getElementById(box_id).innerHTML=player; 
     document.getElementById(box_id).style.color="blue";
-    document.getElementById(box_id).style.fontSize="50px";
       checkWinner();
        player='O';
       
    }else{
     document.getElementById(box_id).innerHTML=player;  
-    document.getElementById(box_id).style.color="red";
-    document.getElementById(box_id).style.fontSize="50px";
+    document.getElementById(box_id).style.color="red"
     checkWinner();
     player='X';
    }
