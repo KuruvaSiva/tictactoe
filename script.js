@@ -16,11 +16,15 @@ function gamePlay(box_id){
    if(player=='X')
    {
     document.getElementById(box_id).innerHTML=player; 
+    document.getElementById(box_id).style.color="blue";
+    document.getElementById(box_id).style.fontSize="50px";
       checkWinner();
        player='O';
       
    }else{
     document.getElementById(box_id).innerHTML=player;  
+    document.getElementById(box_id).style.color="red";
+    document.getElementById(box_id).style.fontSize="50px";
     checkWinner();
     player='X';
    }
@@ -46,37 +50,63 @@ function checkWinner(){
     let c8 = document.getElementById('box8').innerHTML
     let c9 = document.getElementById('box9').innerHTML
     console.log("Hellow");
-   
+
+  
     if(c1==player && c2 == player && c3==player){
+        drawStrike('horizontal', 'top');
         document.getElementById('result').innerHTML=player+ " is the winner"
+        document.getElementById('box1').style.backgroundColor="gold";
+        document.getElementById('box2').style.backgroundColor="gold";
+        document.getElementById('box3').style.backgroundColor="gold";
         gameEnd=true;
     }
     else if(c4==player && c5 == player && c6==player){
          document.getElementById('result').innerHTML=player+ " is the winner"
+         document.getElementById('box4').style.backgroundColor="gold";
+         document.getElementById('box5').style.backgroundColor="gold";
+         document.getElementById('box6').style.backgroundColor="gold";
          gameEnd=true;
     }
     else if(c7==player && c8 == player && c9==player){
         document.getElementById('result').innerHTML=player+ " is the winner"
+        document.getElementById('box7').style.backgroundColor="gold";
+        document.getElementById('box8').style.backgroundColor="gold";
+        document.getElementById('box9').style.backgroundColor="gold";
         gameEnd=true;
     }
     else if(c1==player && c4 == player && c7==player){
         document.getElementById('result').innerHTML=player+ " is the winner"
+        document.getElementById('box1').style.backgroundColor="gold";
+        document.getElementById('box4').style.backgroundColor="gold";
+        document.getElementById('box7').style.backgroundColor="gold";
         gameEnd=true;
     }
     else if(c2==player && c5 == player && c8==player){
          document.getElementById('result').innerHTML=player+ " is the winner"
+         document.getElementById('box2').style.backgroundColor="gold";
+         document.getElementById('box5').style.backgroundColor="gold";
+         document.getElementById('box8').style.backgroundColor="gold";
          gameEnd=true;
     }
     else if(c3==player && c6 == player && c9==player){
          document.getElementById('result').innerHTML=player+ " is the winner"
+         document.getElementById('box3').style.backgroundColor="gold";
+         document.getElementById('box6').style.backgroundColor="gold";
+         document.getElementById('box9').style.backgroundColor="gold";
          gameEnd=true;
     }
     else if(c1==player && c5 == player && c9==player){
          document.getElementById('result').innerHTML=player+ " is the winner"
+         document.getElementById('box1').style.backgroundColor="gold";
+         document.getElementById('box5').style.backgroundColor="gold";
+         document.getElementById('box9').style.backgroundColor="gold";
          gameEnd=true;
     }
     else if(c3==player && c5 == player && c7==player){
          document.getElementById('result').innerHTML=player+ " is the winner"
+         document.getElementById('box3').style.backgroundColor="gold";
+         document.getElementById('box5').style.backgroundColor="gold";
+         document.getElementById('box7').style.backgroundColor="gold";
          gameEnd=true;
     }else if(c1!=''&& c2!=''&& c3!=''&& c4!=''&& c5!=''&& c6!=''&& c7!=''&& c8!=''&& c9!=''){
         document.getElementById('result').innerHTML="Match is draw "
