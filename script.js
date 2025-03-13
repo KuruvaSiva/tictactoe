@@ -51,7 +51,6 @@ function checkWinner(){
 
   
     if(c1==player && c2 == player && c3==player){
-        drawStrike('horizontal', 'top');
         document.getElementById('result').innerHTML=player+ " is the winner"
         document.getElementById('box1').style.backgroundColor="gold";
         document.getElementById('box2').style.backgroundColor="gold";
