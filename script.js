@@ -3,7 +3,7 @@ function gamePlay(box_id){
     
     var box = document.getElementById(box_id);
     if(box.innerHTML != '') {
-        lert('already selected')
+      // alert('already selected')
         return;
     }
    
